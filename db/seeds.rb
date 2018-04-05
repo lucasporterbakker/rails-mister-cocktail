@@ -13,4 +13,9 @@ require 'json'
 
 # https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list
 
-# Cocktail.create(name:),
+Cocktail.delete_all
+
+# 5.times do
+  Cocktail.create(name: "Moscow Mule")
+  Cocktail.create(name: "Rum and Coke")
+# end
