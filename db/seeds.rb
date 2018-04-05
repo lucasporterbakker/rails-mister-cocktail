@@ -11,6 +11,11 @@ require 'open-uri'
 require 'json'
 
 
+
+Ingredient.create(name: "lemon")
+Ingredient.create(name: "ice")
+Ingredient.create(name: "mint leaves")
+
 # https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list
 
 # Cocktail.create(name:),
