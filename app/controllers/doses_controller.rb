@@ -32,6 +32,7 @@ class DosesController < ApplicationController
 
   # when create new dose we put in parameters
   # (description, ingredient_id and ingredient)
+  # no cocktail_id as that's coming from the backend and user doesn't provide input
   def dose_params
     params.require(:dose).permit(:description, :ingredient_id)
   end

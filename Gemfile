@@ -6,6 +6,8 @@ git_source(:github) do |repo_name|
 end
 
 gem 'simple_form'
+gem 'figaro'
+gem 'cloudinary'
 
 gem 'faker'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

@@ -1,0 +1,16 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col col-sm-4 col-sm-offset-4">
+      <h1>Add a new dose to the cocktail</h1>
+      <%= simple_form_for ([@cocktail, @dose]) do |f| %>
+      <!-- form action="cocktails/5/doses" method="post" -->
+        <%= f.input :description, inline_label: "Enter an amount" %>
+        <%= f.association :ingredient, collection: Ingredient.all %>
+        <%= f.submit "Add a Dose" %>
+      <% end %>
+
+
+    </div>
+  </div>
+</div>
