@@ -2,7 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@import url('https://fonts.googleapis.com/css?family=Raleway:200');
 
 body {
   font-family: 'Raleway', sans-serif;
@@ -20,6 +19,7 @@ body {
 h1 {
   // font-family: 'Open Sans', sans-serif;
   line-height: 150px;
+  font-family: 'Raleway', sans-serif;
   color: #2181F7;
   font-weight: 200;
   letter-spacing: 4px;
@@ -27,7 +27,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
   line-height: 150px;
   color: #111;
   text-align: center
@@ -41,6 +41,7 @@ h4 {
   padding-bottom: 25px;
   text-decoration: none;
   font-size: 24;
+  font-family: 'Raleway', sans-serif;
   padding-top: 0px;
   margin-top: 0px;
   padding-bottom: 0px;
@@ -107,14 +108,15 @@ h4 {
 }
 
 .card {
-  height: 600px;
-  font-family: 'Open Sans', sans-serif;
+  height: 400px;
+  font-family: 'Raleway', sans-serif;
   font-size: 28px;
   text-decoration: none;
   // text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
   background-position: center;
   padding: 25px;
+  opacity: 0.7;
   margin-bottom: 25px;
   // margin-top: 1px;
   // margin-left: 1px;
@@ -138,7 +140,6 @@ a:hover {
   color: #2181F7;
   text-decoration: none;
 }
-
 
 
 .card-user {
@@ -181,7 +182,6 @@ a:hover {
   padding: 0px !important;
 }
 
-
 .card-link {
   position: absolute;
   top: 0;
@@ -201,6 +201,7 @@ a:hover {
 
 .card:hover {
   cursor: pointer;
+  opacity: 0.9;
   transform: rotate(0deg) scale(0.85) translateY(1px);
   transition: .3s all ease;
   z-index: 400;
@@ -310,6 +311,21 @@ a:hover {
   display: flex;
   align-items: center;
 }
+
+.footer-copyright {
+  text-align: center;
+  align-items: center;
+  justify-content:center;
+}
+
+.footer-copyright:hover {
+  cursor: pointer;
+  opacity: 0.9;
+  transform: rotate(0deg) scale(1.1) translateY(1px);
+  transition: .3s all ease;
+  z-index: 400;
+}
+
 .footer-links a {
   color: black;
   opacity: 0.15;
@@ -323,6 +339,26 @@ a:hover {
 .footer .fa-heart {
   color: #D23333;
 }
+
+
+/* Main navbar */
+// .navbar-imbible {
+//   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+//   background: white;
+//   transition: all 0.3s ease;
+//   height: 70px;
+//   padding: 0px 30px;
+//   text-align: right;
+//   // display: flex;
+//   align-items: center;
+//   // justify-content: space-between;
+// }
+//
+// /* Logo */
+// .navbar-imbible-brand img {
+//   height: 50px;
+// }
+
 
 // #c1 {
 //   background: linear-gradient(to bottom, #59476f 30%, #7b88d1 100%);
