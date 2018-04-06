@@ -7,6 +7,10 @@ end
 
 gem 'simple_form'
 
+gem 'figaro'
+
+gem 'cloudinary'
+
 gem 'faker'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'

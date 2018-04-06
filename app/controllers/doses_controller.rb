@@ -17,7 +17,6 @@ class DosesController < ApplicationController
     end
   end
 
-  # DELETE "doses/25"
   def destroy
     @dose = Dose.find(params[:id])
     @cocktail = @dose.cocktail
