@@ -9,9 +9,9 @@ class DosesController < ApplicationController
   def create
     @dose = Dose.new(dose_params)
     @cocktail = Cocktail.find(params[:cocktail_id])
-    @dose.cocktail = @cocktail
+    @dose.cocktail_id = @cocktail.id
     if @dose.save
-      redirect_to cocktail_path(@dose.cocktail)
+      redirect_to cocktail_path(cocktail)
     else
       render :new
     end

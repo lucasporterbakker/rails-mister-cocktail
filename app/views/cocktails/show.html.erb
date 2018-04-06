@@ -5,3 +5,18 @@
   </div>
   <a class="card-link" href="#" ></a>
 </div>
+
+  <%= link_to "Edit", edit_cocktail_path(@cocktail), class: "btn btn-primary" %>
+  <%= link_to "Go Back", cocktails_path, class: "btn btn-primary" %>
+  <%= link_to "Delete", cocktail_path(@cocktail), method: :delete, data: {confirm: "Are you sure? There's really no point in deleting it."},  class: "btn btn-danger"%>
+
+  <p>
+    <%= link_to "add a dose", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
+  </p>
+  </div>
+</div>
+
+<% @cocktail.doses.each do |dose| %>
+  <p><%= dose.description %> (<%= dose.ingredient.name %>)
+    <%= link_to "delete", dose_path(dose), method: :delete%></p>
+<% end %>
