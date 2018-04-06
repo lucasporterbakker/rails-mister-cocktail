@@ -3,12 +3,18 @@
     <div class="modal-body modal-body-step-1 is-showing">
       <div class="title">Cocktail Shaker</div>
       <div class="description">Hello there, Let's make a cocktail</div>
-      <form>
+      <!-- <form>
         <input type="text" placeholder="Cocktail Name"/>
         <div class="text-center">
-          <div class="button">Add cocktail</div>
+          <div class="button">Add cocktail </div>
         </div>
-      </form>
+      </form> -->
+			<%= simple_form_for (@cocktail), input_html: { class: "something" } do |f| %>
+			<%= f.input :name, class: "text-center", label: false, placeholder: "Mojito, eg" %>
+			<%= f.submit "Add a Cocktail", class: "btn btn-block
+			btn-danger" %>
+			<% end %>
+		</div>
     </div>
 
   </div>
@@ -19,6 +25,18 @@
 </div>
 
 
+<!--
+<div class="container">
+	<div class="row">
+		<div class="col col-sm-4 col-sm-offset-4">
+			<h1>Cocktail Submission</h1>
 
+      <%= simple_form_for (@cocktail) do |f| %>
+      <%= f.input :name %>
+      <%= f.submit %>
+      <% end %>
+    </div>
 
-
+		</div>
+	</div>
+</div> -->

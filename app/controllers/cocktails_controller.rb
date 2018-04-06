@@ -22,17 +22,24 @@ class CocktailsController < ApplicationController
   end
 
   def edit
-    @cocktail = cocktail.find(params[:id])
+    @cocktail = Cocktail.find(params[:id])
   end
 
   def update
-    @cocktail = cocktail.find(params[:id])
+    @cocktail = Cocktail.find(params[:id])
     @cocktail.update(cocktail_params)
     if cocktail.save
       redirect_to cocktail_path(@cocktail)
     else
       render :edit
     end
+  end
+
+  def destroy
+    @cocktail = Cocktail.find(params[:id])
+    @cocktail.destroy
+    redirect_to cocktails_path
+    # do not have a cocktail, so go to index instead
   end
 
   def cocktail_params

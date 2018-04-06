@@ -2,7 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@import url('https://fonts.googleapis.com/css?family=Raleway:200');
 
 body {
   font-family: 'Raleway', sans-serif;
@@ -20,26 +19,32 @@ body {
 h1 {
   // font-family: 'Open Sans', sans-serif;
   line-height: 150px;
+  font-family: 'Raleway', sans-serif;
   color: #2181F7;
-  font-weight: 300;
-  letter-spacing: 3px;
+  font-weight: 200;
+  letter-spacing: 4px;
   // text-align: center
 }
 
 h2 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
   line-height: 150px;
   color: #111;
   text-align: center
 }
 
+
+
 h4 {
   color: #111;
   text-align: center;
-  padding-bottom: 25px;
+  padding-bottom: 100px;
   text-decoration: none;
   font-size: 24;
-  padding-top: 35px;
+  font-family: 'Raleway', sans-serif;
+  padding-top: 0px;
+  margin-top: 0px;
+  padding-bottom: 0px;
   // position: absolute;
   // top: 30%;
   // left: 50%;
@@ -56,6 +61,7 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 100px;
 }
 
 .banner h1 {
@@ -102,14 +108,15 @@ h4 {
 }
 
 .card {
-  height: 600px;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 24px;
+  height: 400px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 28px;
   text-decoration: none;
   // text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
   background-position: center;
   padding: 25px;
+  opacity: 0.7;
   margin-bottom: 25px;
   // margin-top: 1px;
   // margin-left: 1px;
@@ -130,10 +137,9 @@ a {
 }
 
 a:hover {
-  color: #FFFFFF;
+  color: #2181F7;
   text-decoration: none;
 }
-
 
 
 .card-user {
@@ -176,7 +182,6 @@ a:hover {
   padding: 0px !important;
 }
 
-
 .card-link {
   position: absolute;
   top: 0;
@@ -196,21 +201,23 @@ a:hover {
 
 .card:hover {
   cursor: pointer;
+  opacity: 0.9;
   transform: rotate(0deg) scale(0.85) translateY(1px);
   transition: .3s all ease;
   z-index: 400;
 }
 
 .page {
-  position: absolute;
-  top: 80%;
+  position: relative;
+  margin-top: 25px;
+  top: 155%;
   width: 100%;
   left: 0%;
   height: 20%;
   z-index: 30;
 }
 
-li {
+.page p {
   position: absolute;
   top: 50%;
   list-style: none;
@@ -218,13 +225,13 @@ li {
 }
 
 
-li:nth-child(1) {
-  left: 40%;
+.page p:nth-child(1) {
+  right: 35%;
   animation: simple1 1s linear infinite;
 }
 
-li:nth-child(2) {
-  right: 41%;
+.page p:nth-child(2) {
+  left: 35%;
   animation: simple 1s linear infinite;
 }
 
@@ -291,32 +298,47 @@ li:nth-child(2) {
   box-shadow: 0px 10px 50px #555;
 }
 
-// #c1 {
-//   background: linear-gradient(to bottom, #59476f 30%, #7b88d1 100%);
-//   box-shadow: 0px 20px 100px #555;
-//   left: 100%;
-//   z-index: 0;
-// }
-//
-// #c2 {
-//   left: -100%;
-//   z-index: 0;
-//   background: linear-gradient(to bottom, #59476f 30%, #7b88d1 100%);
-//   box-shadow: 0px 20px 100px #555;
-// }
+.footer {
+  background: #F4F4F4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0px 50px;
+  color: rgba(0,0,0,0.3);
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+}
 
-// .container:hover {
-//   cursor: pointer;
-//   transform: rotate(0deg) scale(1) translateY(10px);
-//   transition: .5s all ease;
-//   z-index: 400;
-// }
+.footer-copyright {
+  text-align: center;
+  align-items: center;
+  justify-content:center;
+}
 
-html {
-  background-image: url("https://images.unsplash.com/photo-1424591093900-514bab956faf?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9ed0101e6e7e48218b8318c0347730d5&auto=format&fit=crop&w=1500&q=80")
-  // min-height: 100%;
-  // font-family: "Roboto", sans-serif;
- }
+.footer-copyright:hover {
+  cursor: pointer;
+  opacity: 0.9;
+  transform: rotate(0deg) scale(1.1) translateY(1px);
+  transition: .3s all ease;
+  z-index: 400;
+}
+
+.footer-links a {
+  color: black;
+  opacity: 0.15;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  opacity: 1;
+}
+.footer .fa-heart {
+  color: #D23333;
+}
 
 .title {
   text-transform: uppercase;
@@ -327,13 +349,11 @@ html {
   font-size: 24px;
   letter-spacing: 1px;
 }
-
 .description {
   text-align: center;
   color: #666;
   margin-bottom: 30px;
 }
-
 input[type="text"],
 input[type="email"] {
   padding: 10px 20px;
@@ -350,11 +370,9 @@ input[type="text"]:focus,
 input[type="email"]:focus {
   border-color: #FF6F00;
 }
-
 input[type="radio"] {
   margin-right: 10px;
 }
-
 label {
   margin-bottom: 20px;
   display: block;
@@ -369,7 +387,6 @@ label:first-child {
   margin-bottom: 0;
   border-bottom: none;
 }
-
 .button,
 .rerun-button {
   padding: 10px 20px;
@@ -393,22 +410,17 @@ label:first-child {
           box-shadow: 0px 10px 15px -6px rgba(0, 0, 0, 0.2);
   display: none;
 }
-
 .text-center {
   text-align: center;
 }
-
 .modal-wrap {
-  max-width: 600px;
+  max-width: auto;
   margin: 50px auto;
-  -webkit-transition: -webkit-transform 300ms ease-in-out;
-  transition: -webkit-transform 300ms ease-in-out;
-  transition: transform 300ms ease-in-out;
-  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
-
+  // -webkit-transition: -webkit-transform 300ms ease-in-out;
+  // transition: -webkit-transform 300ms ease-in-out;
+  // transition: transform 300ms ease-in-out;
+  // transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
 }
-
-
 .modal-header span {
   display: block;
   height: 12px;
@@ -421,53 +433,45 @@ label:first-child {
   // background: rgba(0, 0, 0, 0.4);
   // background: #FF8F00;
 }
-
 .modal-bodies {
   position: relative;
   -webkit-perspective: 1000px;
           perspective: 1000px;
 }
-
 .modal-body {
   background: white;
   padding: 40px 100px;
   -webkit-box-shadow: 0px 50px 30px -30px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 50px 30px -30px rgba(0, 0, 0, 0.3);
-  margin-bottom: 50px;
-  margin-right: 50px;
-  margin-left: 50px;
-  margin-top: 140px;
+  // margin-bottom: 50px;
+  margin-right: 10%;
+  // margin-left: 50px;
+  margin-top: 15%;
   position: absolute;
   top: 0;
   display: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 100%;
+  width: 80%;
   -webkit-transform-origin: top left;
           transform-origin: top left;
-
 }
-
 .modal-body.is-showing {
   display: block;
 }
-
 .animate-out {
   -webkit-animation: out 600ms ease-in-out forwards;
           animation: out 600ms ease-in-out forwards;
 }
-
 .animate-in {
   -webkit-animation: in 500ms ease-in-out forwards;
           animation: in 500ms ease-in-out forwards;
   display: block;
 }
-
 .animate-up {
   -webkit-transform: translateY(-500px) rotate(30deg);
           transform: translateY(-500px) rotate(30deg);
 }
-
 @-webkit-keyframes out {
   0% {
     -webkit-transform: translateY(0px) rotate(0deg);
@@ -482,7 +486,6 @@ label:first-child {
             transform: translateY(800px) rotate(10deg);
   }
 }
-
 @keyframes out {
   0% {
     -webkit-transform: translateY(0px) rotate(0deg);
@@ -522,3 +525,49 @@ label:first-child {
   }
 }
 
+html {
+  background-image: url("https://images.unsplash.com/photo-1424591093900-514bab956faf?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9ed0101e6e7e48218b8318c0347730d5&auto=format&fit=crop&w=1500&q=80")
+  // min-height: 100%;
+  // font-family: "Roboto", sans-serif;
+ }
+
+
+/* Main navbar */
+// .navbar-imbible {
+//   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+//   background: white;
+//   transition: all 0.3s ease;
+//   height: 70px;
+//   padding: 0px 30px;
+//   text-align: right;
+//   // display: flex;
+//   align-items: center;
+//   // justify-content: space-between;
+// }
+//
+// /* Logo */
+// .navbar-imbible-brand img {
+//   height: 50px;
+// }
+
+
+// #c1 {
+//   background: linear-gradient(to bottom, #59476f 30%, #7b88d1 100%);
+//   box-shadow: 0px 20px 100px #555;
+//   left: 100%;
+//   z-index: 0;
+// }
+//
+// #c2 {
+//   left: -100%;
+//   z-index: 0;
+//   background: linear-gradient(to bottom, #59476f 30%, #7b88d1 100%);
+//   box-shadow: 0px 20px 100px #555;
+// }
+
+// .container:hover {
+//   cursor: pointer;
+//   transform: rotate(0deg) scale(1) translateY(10px);
+//   transition: .5s all ease;
+//   z-index: 400;
+// }

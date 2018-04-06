@@ -4,13 +4,18 @@
     <div class="modal-body modal-body-step-1 is-showing" >
       <div class="title">Add a dose</div>
       <div class="description">Give the cocktail some flava</div>
-      <form>
+      <%= simple_form_for [@cocktail, @dose] do |f| %>
+      <%= f.input :description, label: false, placeholder: "Add Dose" %>
+      <%= f.association :ingredient, collection: Ingredient.all, prompt: "Ingredient",label: false %>
+      <%= f.submit "Add Taste", class: "btn btn-warning"%>
+      <% end %>
+      <!-- <form>
         <input type="text" placeholder="Add Dose"/>
         <input type="text" placeholder="Ingredient"/>
         <div class="text-center">
           <div class="button">Add taste</div>
         </div>
-      </form>
+      </form> -->
     </div>
   </div>
 </div>
