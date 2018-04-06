@@ -2,27 +2,49 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
 
-
-.body {
-  font-family: 'Open Sans', sans-serif;
-  text-align: center
+body {
+  font-family: 'Raleway', sans-serif;
+  background:#eee;
+  text-decoration: none;
 }
+
+// .body {
+//   font-family: 'Open Sans', sans-serif;
+//   text-align: center
+// }
+
 
 
 h1 {
-  font-family: 'Open Sans', sans-serif;
+  // font-family: 'Open Sans', sans-serif;
   line-height: 150px;
+  color: #2181F7;
   font-weight: 300;
+  letter-spacing: 3px;
   // text-align: center
 }
 
 h2 {
   font-family: 'Open Sans', sans-serif;
   line-height: 150px;
+  color: #111;
   text-align: center
 }
 
+h4 {
+  color: #111;
+  text-align: center;
+  padding-bottom: 25px;
+  text-decoration: none;
+  font-size: 24;
+  padding-top: 35px;
+  // position: absolute;
+  // top: 30%;
+  // left: 50%;
+  letter-spacing: 2px;
+}
 
 .banner {
   color: white;
@@ -52,15 +74,16 @@ h2 {
 
 .btn-medium {
   color: #FFFFFF;
-  border: 1px solid #999999;
+  line-height: 50px;
+  border: 1px solid #111;
   padding: 10px 15px;
   border-radius: 50px;
-  font-weight: lighter;
-  opacity: 0.6;
+  color: #111;
+  // font-weight: lighter;
+  // opacity: 1;
 }
 .btn-medium:hover {
   opacity: 1;
-  text-decoration: none;
   color: #FFFFFF;
 }
 .btn-treehouse {
@@ -69,7 +92,7 @@ h2 {
   border-radius: 4px;
   font-weight: bold;
   background: #6AD58B;
-  // transition: background 0.3s ease;
+  transition: 0.3s ease;
 }
 .btn-treehouse:hover {
   opacity: 1;
@@ -79,14 +102,40 @@ h2 {
 }
 
 .card {
-  height: 175px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  height: 600px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  text-decoration: none;
+  // text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
   background-position: center;
+  padding: 25px;
   margin-bottom: 25px;
-  color: white;
+  // margin-top: 1px;
+  // margin-left: 1px;
+  // margin-right: 1px;
+  color: #FFFFFF;
   position: relative;
+  transition: .3s all ease;
+  transform: rotateX(5deg) scale(0.7);
+  perspective: 100px;
+  box-shadow: 0px 5px 5px #555;
+  animation: entry 1s linear 1;
 }
+
+a {
+  color: #1A1A1A;
+  // text-decoration: none;
+  background-color: transparent;
+}
+
+a:hover {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+
+
 .card-user {
   position: absolute;
   right: 10px;
@@ -103,21 +152,31 @@ h2 {
 }
 .card-description {
   position: absolute;
+  text-decoration: none;
   bottom: 10px;
   left: 10px;
 }
 .card-description h2 {
   font-size: 24px;
   font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
   font-weight: 300;
 }
 .card-description p {
   font-size: 14px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
+  color: #FFFFFF;
   opacity: 0.7;
+  text-decoration: none;
   font-weight: lighter;
 }
+
+.wide-col {
+  padding: 0px !important;
+}
+
+
 .card-link {
   position: absolute;
   top: 0;
@@ -125,9 +184,130 @@ h2 {
   right: 0;
   width: 100%;
   z-index: 2;
+  color: #FFFFFF;
   background: black;
+  text-decoration: none;
   opacity: 0;
 }
 .card-link:hover {
   opacity: 0.1;
+  text-decoration: none;
 }
+
+.card:hover {
+  cursor: pointer;
+  transform: rotate(0deg) scale(0.85) translateY(1px);
+  transition: .3s all ease;
+  z-index: 400;
+}
+
+.page {
+  position: absolute;
+  top: 80%;
+  width: 100%;
+  left: 0%;
+  height: 20%;
+  z-index: 30;
+}
+
+li {
+  position: absolute;
+  top: 50%;
+  list-style: none;
+  color: #111;
+}
+
+
+li:nth-child(1) {
+  left: 40%;
+  animation: simple1 1s linear infinite;
+}
+
+li:nth-child(2) {
+  right: 41%;
+  animation: simple 1s linear infinite;
+}
+
+@keyframes simple {
+  50% {
+    transform: translateX(10px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(10px);
+    opacity: 0;
+  }
+}
+
+@keyframes simple1 {
+  50% {
+    transform: translateX(-10px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+}
+
+@keyframes entry {
+  0% {
+    top: -20%;
+    opacity: 0.1;
+  }
+  100% {
+    top: 0%;
+  }
+}
+
+.wrapper {
+  position: absolute;
+  top: 10%;
+  left: 40%;
+  width: 300px;
+  color: #FFFFFF;
+  height: 500px;
+  perspective: 900px;
+}
+
+// .container {
+//   top: 0%;
+//   width: 100%;
+//   height: 100%;
+//   transition: .5s all ease;
+//   transform: rotateX(60deg) scale(0.7);
+//   perspective: 900px;
+//   box-shadow: 0px 20px 50px #555;
+//   animation: entry 1s linear 1;
+// }
+
+#c0 {
+  // position: absolute;
+  // top: 0%;
+  // width: 100%;
+  // height: 100%;
+  // background: linear-gradient(to bottom, #eba65b 30%, #d99267 100%);
+  z-index: 300;
+  box-shadow: 0px 10px 50px #555;
+}
+
+// #c1 {
+//   background: linear-gradient(to bottom, #59476f 30%, #7b88d1 100%);
+//   box-shadow: 0px 20px 100px #555;
+//   left: 100%;
+//   z-index: 0;
+// }
+//
+// #c2 {
+//   left: -100%;
+//   z-index: 0;
+//   background: linear-gradient(to bottom, #59476f 30%, #7b88d1 100%);
+//   box-shadow: 0px 20px 100px #555;
+// }
+
+// .container:hover {
+//   cursor: pointer;
+//   transform: rotate(0deg) scale(1) translateY(10px);
+//   transition: .5s all ease;
+//   z-index: 400;
+// }
