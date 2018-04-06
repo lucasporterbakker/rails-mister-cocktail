@@ -1,15 +1,24 @@
-<div class="container">
-	<div class="row">
-		<div class="col col-sm-4 col-sm-offset-4">
-			<h1>Add a new dose to the cocktail</h1>
-			<%= simple_form_for ([@cocktail, @dose]) do |f| %>
-
-				<%= f.input :description, inline_label: "Enter an amount" %>
-				<%= f.association :ingredient, collection: Ingredient.all %>
-				<%= f.submit "Add a Dose" %>
-			<% end %>
-
-
-		</div>
-	</div>
+<div class="modal-wrap" style="background-image: url(<%= image_path("doses.jpeg") %>); linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%)">
+  <!-- <div class="modal-header"><span class="is-active"></span><span></span><span></span></div> -->
+  <div class="modal-bodies">
+    <div class="modal-body modal-body-step-1 is-showing" >
+      <div class="title">Add a dose</div>
+      <div class="description">Give the cocktail some flava</div>
+      <%= simple_form_for [@cocktail, @dose] do |f| %>
+      <%= f.input :description, label: false, placeholder: "Add Dose" %>
+      <%= f.association :ingredient, collection: Ingredient.all, prompt: "Ingredient",label: false %>
+      <%= f.submit "Add Taste", class: "btn btn-warning"%>
+      <% end %>
+      <!-- <form>
+        <input type="text" placeholder="Add Dose"/>
+        <input type="text" placeholder="Ingredient"/>
+        <div class="text-center">
+          <div class="button">Add taste</div>
+        </div>
+      </form> -->
+    </div>
+  </div>
+</div>
+<div class="text-center">
+  <div class="rerun-button">ReRun</div>
 </div>

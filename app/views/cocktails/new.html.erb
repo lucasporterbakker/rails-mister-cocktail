@@ -1,22 +1,31 @@
-  <!-- <div class="loader">
-  <ul>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
-  <div class="wineglass left">
-    <div class="top"></div>
+<div class="modal-wrap">
+
+    <div class="modal-body modal-body-step-1 is-showing">
+      <div class="title">Cocktail Shaker</div>
+      <div class="description">Hello there, Let's make a cocktail</div>
+      <!-- <form>
+        <input type="text" placeholder="Cocktail Name"/>
+        <div class="text-center">
+          <div class="button">Add cocktail </div>
+        </div>
+      </form> -->
+			<%= simple_form_for (@cocktail), input_html: { class: "something" } do |f| %>
+			<%= f.input :name, class: "text-center", label: false, placeholder: "Mojito, eg" %>
+			<%= f.submit "Add a Cocktail", class: "btn btn-block
+			btn-danger" %>
+			<% end %>
+		</div>
+    </div>
+
   </div>
-  <div class="wineglass right">
-    <div class="top"></div>
-  </div> -->
-  <!-- <%= simple_form_for (@cocktail) do |f| %>
-  <%= f.input :name %>
-  <%= f.submit %>
-  <% end %>
-</div> -->
+</div>
+
+<div class="text-center">
+  <div class="rerun-button">ReRun</div>
+</div>
 
 
+<!--
 <div class="container">
 	<div class="row">
 		<div class="col col-sm-4 col-sm-offset-4">
@@ -30,4 +39,4 @@
 
 		</div>
 	</div>
-</div>
+</div> -->
