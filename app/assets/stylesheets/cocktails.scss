@@ -21,8 +21,8 @@ h1 {
   // font-family: 'Open Sans', sans-serif;
   line-height: 150px;
   color: #2181F7;
-  font-weight: 300;
-  letter-spacing: 3px;
+  font-weight: 200;
+  letter-spacing: 4px;
   // text-align: center
 }
 
@@ -33,13 +33,17 @@ h2 {
   text-align: center
 }
 
+
+
 h4 {
   color: #111;
   text-align: center;
   padding-bottom: 25px;
   text-decoration: none;
   font-size: 24;
-  padding-top: 35px;
+  padding-top: 0px;
+  margin-top: 0px;
+  padding-bottom: 0px;
   // position: absolute;
   // top: 30%;
   // left: 50%;
@@ -56,6 +60,7 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 100px;
 }
 
 .banner h1 {
@@ -104,7 +109,7 @@ h4 {
 .card {
   height: 600px;
   font-family: 'Open Sans', sans-serif;
-  font-size: 24px;
+  font-size: 28px;
   text-decoration: none;
   // text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
@@ -130,7 +135,7 @@ a {
 }
 
 a:hover {
-  color: #FFFFFF;
+  color: #2181F7;
   text-decoration: none;
 }
 
@@ -202,15 +207,16 @@ a:hover {
 }
 
 .page {
-  position: absolute;
-  top: 80%;
+  position: relative;
+  margin-top: 25px;
+  top: 155%;
   width: 100%;
   left: 0%;
   height: 20%;
   z-index: 30;
 }
 
-li {
+.page p {
   position: absolute;
   top: 50%;
   list-style: none;
@@ -218,13 +224,13 @@ li {
 }
 
 
-li:nth-child(1) {
-  left: 40%;
+.page p:nth-child(1) {
+  right: 35%;
   animation: simple1 1s linear infinite;
 }
 
-li:nth-child(2) {
-  right: 41%;
+.page p:nth-child(2) {
+  left: 35%;
   animation: simple 1s linear infinite;
 }
 
@@ -289,6 +295,33 @@ li:nth-child(2) {
   // background: linear-gradient(to bottom, #eba65b 30%, #d99267 100%);
   z-index: 300;
   box-shadow: 0px 10px 50px #555;
+}
+
+.footer {
+  background: #F4F4F4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0px 50px;
+  color: rgba(0,0,0,0.3);
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  color: black;
+  opacity: 0.15;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  opacity: 1;
+}
+.footer .fa-heart {
+  color: #D23333;
 }
 
 // #c1 {

@@ -35,6 +35,13 @@ class CocktailsController < ApplicationController
     end
   end
 
+  def destroy
+    @cocktail = Cocktail.find(params[:id])
+    @cocktail.destroy
+    redirect_to cocktails_path
+    # do not have a cocktail, so go to index instead
+  end
+
   def cocktail_params
     params.require(:cocktail).permit(:name)
   end

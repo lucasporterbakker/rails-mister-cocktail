@@ -1,8 +1,33 @@
-<%= simple_form_for (@cocktail) do |f| %>
+  <!-- <div class="loader">
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+  <div class="wineglass left">
+    <div class="top"></div>
+  </div>
+  <div class="wineglass right">
+    <div class="top"></div>
+  </div> -->
+  <!-- <%= simple_form_for (@cocktail) do |f| %>
+  <%= f.input :name %>
+  <%= f.submit %>
+  <% end %>
+</div> -->
 
-<%= f.input :name %>
 
+<div class="container">
+	<div class="row">
+		<div class="col col-sm-4 col-sm-offset-4">
+			<h1>Cocktail Submission</h1>
 
-<%= f.submit %>
+      <%= simple_form_for (@cocktail) do |f| %>
+      <%= f.input :name %>
+      <%= f.submit %>
+      <% end %>
+    </div>
 
-<% end %>
+		</div>
+	</div>
+</div>
